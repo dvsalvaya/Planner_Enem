@@ -1,0 +1,40 @@
+{
+  "name": "enem-checklist",
+  "version": "1.0.0",
+  "description": "Checklist de estudos para o ENEM",
+  "main": "main-electron.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --win"
+  },
+  "author": "Antigravity",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.enem.checklist",
+    "productName": "Checklist ENEM",
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Checklist ENEM"
+    },
+    "files": [
+      "index.html",
+      "src/**/*",
+      "main-electron.js",
+      "preload.js"
+    ]
+  }
+}

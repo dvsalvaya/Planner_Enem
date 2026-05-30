@@ -3,3 +3,9 @@ ARCHITECTURE.md
 PLANNER_EXPANDIDO.md
 
 PLANNER.md
+
+node_modules/
+dist/
+out/
+.electron/
+*.log
